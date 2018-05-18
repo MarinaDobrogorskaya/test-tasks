@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Something about ISS</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <style>
+
+        #map {
+            height: 75%;
+            width: 66.6%;
+            display: inline-block;
+        }
+
+        #crew {
+            width: 25%;
+            float: right;
+            display: inline-block;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 5px;
+            padding: 5px;
+        }
+        h5 {
+            float: right;
+        }
+        span {
+            font-size: x-large;
+        }
+
+        .panel-info {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="row">
+        <div id="location" class="panel panel-info col-md-8">
+            <div class="panel-heading">
+                <h3 class="panel-title">ISS is now located at: </h3>
+            </div>
+            <div id="location-info" class="panel-body"></div>
+        </div>
+        <div id="utc-time" class="panel panel-info col-md-offset-1 col-md-3">
+            <div class="panel-heading">
+                <h3 id="current-time" class="panel-title"></h3>
+            </div>
+            <div id="utc-date" class="panel-body"></div>
+        </div>
+    </div>
+
+
+    <div id="map"></div>
+
+
+    <div id="crew" class="panel panel-primary">
+        <div id="list" class="panel-body"></div>
+        <div id="counter" class="panel-footer"></div>
+    </div>
+
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBv2zaWx9WqMDgr1a1vdDfWx-nVBzVYGRw&callback=main'
+        async defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
